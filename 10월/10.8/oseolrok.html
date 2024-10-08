@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      span.bold {
+        font-weight: bold;
+      }
+      span.big {
+        font-size: 20px;
+      }
+      span.gray {
+        color: gray;
+      }
+      span.orange {
+        color: orange;
+      }
+      span.line {
+        text-decoration: line-through;
+      }
+      a .img {
+        width: 224px;
+        height: 250px;
+        background: url(image/oseolrok/20240328142827057FF.png);
+        background-size: cover;
+      }
+      a .img2 {
+        width: 224px;
+        height: 250px;
+        background: url(image/oseolrok/20240524000440186KR.png);
+        background-size: cover;
+      }
+      a .img3 {
+        width: 224px;
+        height: 250px;
+        background: url(image/oseolrok/304_20191213161207609NY.png);
+        background-size: cover;
+      }
+      a .img4 {
+        width: 224px;
+        height: 250px;
+        background: url(image/oseolrok/304_20240328142822711SY.png);
+        background-size: cover;
+      }
+      a .img5 {
+        width: 224px;
+        height: 250px;
+        background: url(image/oseolrok/prm_sejak.png);
+        /* background-position: center; */
+        background-size: cover;
+      }
+      @media screen and (max-width: 768px){
+        ul{flex-direction: column;}
+        a{display: flex;
+        }
+        /* li{position: relative;} */
+        /* p{position: absolute;
+        top: 50px;
+        left: 224px;} */
+        p{float: block}              /*아 모르겠다 */
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li>
+          <a href="#"
+            ><div class="img"></div>
+            달빛걷기
+           
+          </a>
+          <p><span class="line gray">15000원</span></p>
+          <p>
+            <span class="bold big orange">35%</span>
+            <span class="bold big">12000원</span>
+          </p>
+        </li>
+        <li>
+          <a href="#"
+            ><div class="img2"></div>
+            삼다연 제주영귤 30g
+            
+          </a>
+          <p><span class="line gray">25000원</span></p>
+            <p><span class="bold big orange">35%<span class="bold big"> 16000원</span></p>
+        </li>
+        <li>
+          <a href="#"
+            ><div class="img3"></div>
+            티 에디션
+ 
+          </a>
+          <p><span class="line gray">20000원</span></p>
+          <p><span class="bold big orange">45%<span class="bold big"> 11000원</span></p>
+        </li>
+        <li>
+          <a href="#"
+            ><div class="img4"></div>
+            시그니처 티
+
+          </a>
+          <p><span class="big"><span class="bold big">14000원</span></p>
+          <p></p>
+        </li>
+        <li>
+          <a href="#"
+            ><div class="img5"></div>
+            가을 산책 티 타임 세트
+ 
+          </a>
+          <p><span class="big"><span class="bold big">14000원</span></p>
+          <p></p>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

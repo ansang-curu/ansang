@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 2000px;
+        list-style: none;
+        position: relative;
+        transition: all 0.2s;
+        animation: ani 8s infinite;
+      }
+      @keyframes ani {
+        0% {
+        }
+        50% {
+          transform: translate(-350px);
+        }
+        100% {
+          transform: translate(0px);
+        }
+      }
+      section {
+        width: 1350px;
+        height: 382px;
+        /* max-width: 1500px; */
+        border: 1px solid red;
+        overflow: hidden;
+      }
+      li {
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li><img src="image/baskin/b1.png" alt="" /></li>
+        <li><img src="image/baskin/b2.jpg" alt="" /></li>
+        <li><img src="image/baskin/b3.jpg" alt="" /></li>
+        <li><img src="image/baskin/b4.png" alt="" /></li>
+        <li><img src="image/baskin/b5.jpg" alt="" /></li>
+        <li><img src="image/baskin/b6.png" alt="" /></li>
+      </ul>
+    </section>
+  </body>
+</html>
