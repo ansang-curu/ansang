@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        .container {
+            margin: 0 auto;
+            width: 1200px;
+            border: 1px solid #000;
+        }
+        .header {
+            background: url(../img/d1.jpg) no-repeat center;
+            width: 100%; /* 1200px 대신 100%로 설정 */
+            height: 150px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        nav {
+            width: 100%; /* 1200px 대신 100%로 설정 */
+            height: 100px;
+        }
+        nav ul {
+            list-style: none;
+            text-align: center; /* 중앙 정렬 */
+        }
+        nav ul li {
+            width: 150px;
+            background-color: azure;
+            display: inline-block;
+        }
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+            display: block; /* 전체 너비 클릭 가능 */
+            height: 100%; /* 메뉴 전체 높이 차지 */
+            line-height: 100px; /* 중앙 정렬 */
+        }
+        .main {
+            display: flex; /* Flexbox 사용 */
+            margin-top: 20px; /* 상단 여백 추가 */
+        }
+        .contents {
+            flex: 2; /* 비율로 공간 차지 */
+            padding: 20px;
+            border: 1px solid #000;
+            background-color: #f4f4f4;
+        }
+        .sidebar {
+            flex: 1; /* 비율로 공간 차지 */
+            width: 400px; /* 고정 너비가 아닌 비율로 설정 */
+            padding: 20px;
+            border: 1px solid #000;
+            background-color: #e2e2e2;
+        }
+        .footer {
+            clear: both; /* 플로트 초기화 */
+            margin-top: 20px; /* 상단 여백 추가 */
+            text-align: center; /* 중앙 정렬 */
+            padding: 10px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <header>
+                <h1>북북이</h1>
+            </header>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+            </ul>
+        </nav>
+
+        <div class="main">
+            <div class="contents">
+                <section>
+                    <h2>북북이와 함께 지내는중</h2>
+                    <p>북북스북북스</p>
+                    <div class="list">
+                        <ul>
+                            <li>북북이와 할일</li>
+                            <li>쇼핑</li>
+                            <li>술담그기</li>
+                            <li>삼색채경단확인하기</li>
+                        </ul>    
+                    </div>
+                </section>
+            </div>
+
+            <div class="sidebar">
+                <h2>사이드바</h2>
+                <iframe src="" frameborder="0" style="width:100%; height:200px;"></iframe>
+            </div>
+        </div>
+
+        <div class="footer">
+            <footer>푸터 내용</footer>
+        </div>
+    </div>
+</body>
+</html>

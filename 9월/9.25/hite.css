@@ -1,0 +1,169 @@
+*{margin:0;padding:0;}
+
+.cf:after{
+	clear:both;
+	content:"";
+	display:block;
+}
+
+ul,li{list-style:none;}
+/* 필요없는거 같은데 */
+
+#wrap{
+	width:100%;
+	height:auto;
+	background-color:#f4f4f4;
+}
+
+section{
+	width:1070px;
+	height:1020px;
+	margin:0 auto;
+}
+section h2{
+	padding:60px 0 30px 0;
+	font-weight:normal;
+	/*湲��먯쓽 援듦린*/
+}
+#content{
+	width:1070px;
+	height:900px;
+	position:relative;
+	border:1px solid red;
+}
+/* 콘텐트가 부모요소로 포지션 릴레이티브함.  */
+#content div a{
+	display:block;
+	width:100%;
+	height:100%;
+	position:relative;
+}
+/* 콘텐트 안 div는 클라스 이미지들이 있고 그안에 a가 있음 a들을 전부 블록요소로
+바꿔주며 넓이 높이 100%에 포지션을 릴레이티브로함..그리고 a안에 그림이 드감p가드감 */
+#content div a:before{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:0%;
+	background-color:rgba(4,69,244,0.85);
+	transition:all 0.2s;
+}
+/* 콘텐트에 a가 오기전에 전부 가상요소삽입 포지션이 앱솔이고 제일 위 왼쪽에 붙임
+높이는 100이지만 너비를 0으로 하여 보이진 않으나 불투명 배경 파랑이 있음 트랜지션도 있음 */
+
+#content div{display:none;}
+/* 콘텐트안에 전부 안보이게함 */
+#content .img1{
+	display:block;
+	position:absolute;
+	top:0;left:0;
+	width:260px;
+	height:260px;
+}
+/* 사진1번 블록요소로처리 보이게하고 포지션 앱솔로 현재 부모요소는 콘텐트
+사진 크기 높이 정함 이러면 사진이 보이고 글도 보여하는거아닌가 */
+
+#content div a p{
+	position:absolute;
+	width:100%;
+	top:80px;
+	color:#fff;
+	font-size:13px;
+	background-image:url(../img/more.png);
+	background-repeat:no-repeat;
+	background-position:50% 100%;
+	padding-bottom:50px;
+	transition:all 0.5s;
+	text-align:center;
+	opacity:0;
+}
+/* 콘텐트에 a의 p에 따로 스타일적용함. 투명하게 해놔서 안보임 */
+#content div a:hover p{
+	opacity:1;
+}
+#content div a:hover:before{
+	width:100%;
+}
+
+#content .img2{
+	display:block;
+	position:absolute;
+	top:0;left:270px;
+	width:260px;
+	height:530px;
+}
+#content .img2 a p{
+	top:40%;
+}
+#content .img3{
+	display:block;
+	position:absolute;
+	top:0;left:540px;
+	width:260px;
+	height:260px;
+}
+
+#content .img4{
+	display:block;
+	position:absolute;
+	top:0;left:810px;
+	width:260px;
+	height:260px;
+}
+
+#content .img5{
+	display:block;
+	position:absolute;
+	top:270px;left:0px;
+	width:260px;
+	height:260px;
+}
+
+#content .img6{
+	display:block;
+	position:absolute;
+	top:270px;left:540px;
+	width:530px;
+	height:260px;
+}
+
+#content .img8{
+	display:block;
+	position:absolute;
+	top:540px;left:270px;
+	width:530px;
+	height:260px;
+}
+#content div.img6 a:before,
+#content div.img8 a:before{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	height:0;
+	width:100%;
+	background-color:rgba(4,69,244,0.85);
+	transition:all 0.2s;
+}
+#content div.img6 a:hover:before,
+#content div.img8 a:hover:before{
+	height:100%;
+}
+#content .img7{
+position:absolute;
+top:540px;
+left:0px;
+display:block;
+width:260px;
+height:260px;}
+#content .img9{
+	display:block;
+	position:absolute;
+	top:540px;
+	left:810px;
+
+width:260px;
+height:260px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-con {
+        width: 1500px;
+        height: 200px;
+        background-color: blue;
+        display: flex;
+        /* flex-wrap: nowrap; 넘쳐도 한줄로 표시 넓이무시 */
+        /* flex-wrap: wrap; 넘치면 줄바꿈 */
+        /* justify-content: center; 중앙기준으로 배치*/
+        /* justify-content: space-around;  균등배열*/
+        /* justify-content: space-between; 왼쪽으로 붙이고 균등배열 */
+        /* justify-content: space-evenly;처음부터 끝까지 균등배열 */
+        justify-content: center; /*중앙에정렬*/
+        align-items: center; /* 위 아래(세로) 중앙정렬*/
+      }
+      .flex-con > div {
+        background-color: aliceblue;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex box</h1>
+    <div class="flex-con">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var num1 = 10;
+      var num2 = 20;
+      var result;
+      num1--; //9  num1=num1-1
+      num2--; //19
+      document.write(num1, "<br>", num2, "<br>");
+
+      num1++;
+      document.write(num1, "<br>", num2, "<br>");
+
+      result = num2++;
+      document.write(result, "<br>"); //result는 19, 이후 계산  num2는 20
+      document.write(num2, "<br>");
+
+      result = num2++;
+      document.write(result, "<br>"); //여기선 result는 20, num2는 21
+    </script>
+  </head>
+  <body></body>
+</html>

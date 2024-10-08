@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        display: flex;
+      }
+      ul {
+        list-style: none;
+      }
+      .iconbox {
+        /* border: 1px solid red; */
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+      }
+      span {
+        color: #777;
+        font-size: 14px;
+      }
+      span.bold {
+        color: #999;
+        font-weight: bold;
+      }
+      .icon1 {
+        background: url(image/icon_quickmenu.png);
+        width: 70px;
+        height: 70px;
+      }
+      .align {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        margin-left: 5px;
+      }
+      .icon2 {
+        background: url(image/icon_quickmenu.png);
+        width: 70px;
+        height: 70px;
+        background-position: -70px;
+      }
+      .icon3 {
+        background: url(image/icon_quickmenu.png);
+        width: 70px;
+        height: 70px;
+        background-position: -140px;
+      }
+      .icon4 {
+        background: url(image/icon_quickmenu.png);
+        width: 70px;
+        height: 70px;
+        background-position: -210px;
+      }
+      .footer-snsbox {
+        background-color: #444;
+        padding: 10px;
+      }
+      .box1 {
+        border-bottom: 1px solid #666;
+        padding: 10px;
+      }
+      .box1 > ul {
+        display: flex;
+        justify-content: start;
+      }
+      .box1 > ul > li > a {
+        color: #777;
+        padding: 0 10px;
+      }
+      .copyright {
+        width: 1100px;
+        /* border: 1px solid blue; */
+      }
+      .box2 {
+        padding: 10px;
+        display: flex;
+      }
+      .sns {
+        width: 1200px;
+        display: flex;
+        justify-content: right;
+      }
+      .iconface {
+        background: url(image/icon_sns_facebook.png);
+        width: 50px;
+        height: 50px;
+        margin-top: 5px;
+        margin-right: 10px;
+        position: relative;
+      }
+      .iconinsta {
+        background: url(image/icon_sns_instar.png);
+        width: 50px;
+        height: 50px;
+        margin-top: 5px;
+        transition: all 0.3s;
+      }
+      .sns > a:hover .iconinsta {
+        background-position: -50px;
+      }
+      .iconface2 {
+        width: 50px;
+        height: 50px;
+        background: url(image/icon_sns_facebook.png) no-repeat;
+        background-position: -50px;
+        opacity: 0;
+        transition: all 0.2s;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+
+      .sns > a:hover .iconface2 {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="iconbox">
+      <ul>
+        <li>
+          <a href="#">
+            <div class="icon1"></div>
+            <div class="align">
+              프랜차이즈<span>개설절차/투자비용 정보</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><div class="icon2"></div>
+            <div class="align">
+              지사안내<span>수도권/지방 지사정보</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><div class="icon3"></div>
+            <div class="align">광고영상<span>tv광고/동영상</span></div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><div class="icon4"></div>
+            <div class="align">
+              고객문의<span>자주하는 질문/1:1문의</span>
+            </div></a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="footer-snsbox">
+      <div class="box1">
+        <ul>
+          <li class="li2"><a href="#">이용약관</a></li>
+          <li class="li2">
+            <a href="#"><span class="bold">개인정보처리방침</span></a>
+          </li>
+          <li class="li2"><a href="#">써브카드</a></li>
+          <li class="li2"><a href="#">점주관리자</a></li>
+        </ul>
+      </div>
+      <div class="box2">
+        <div class="copyright">
+          <span
+            >서울시 서초구 강남대로 535 프린스빌딩 15층 | 대표 : 인수조 | 전화 :
+            02-111-1111 | 사업자등록번호 : 111-12-159875 <br />
+
+            >SUBWAY® is a Registered Trademark of Subway IP LLC. © 2021 Subway
+            IP LLC. All Rights Reserved.</span
+          >
+        </div>
+        <div class="sns">
+          <a href="">
+            <div class="iconface">
+              <div class="iconface2"></div>
+            </div>
+          </a>
+          <a href=""><div class="iconinsta"></div></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+*{margin: 0; padding: 0;}
+/* 모든 마진 패딩 0, *모든 것 */
+.wrap{
+    width: 900px;
+    margin: 0 auto;
+}
+/* 전체를 감싸고 있는 wrap, 넓이 900에 마진 가운데로 */
+header{
+    height: 300px;
+    background: url(../images/top.jpg) 0% 0%;
+    position: relative;
+}
+/* 헤더를 가두리양식 포지션 릴레이티브 */
+.logo{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+/* 부모인 헤더를 가두고 자식을 포지션 앱솔루트를 통해 배치 */
+/* 포지션 앱솔루트 겹치기 가능, 메뉴만들때 활용,  */
+nav{
+    width: 900px;
+    height: 70px;
+    background-color: #2a1d0a;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    float: left;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+nav ul li a{
+    display: block;
+    /* a는 인라인 요소 width, height를 적용하기 위해 블록 요소로 변경 */
+    width: 150px;
+    height: 40px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    background-color: #fff;
+    color: #000;
+    text-decoration: underline;
+}
+/* a태그에 마우스 올렷을때 */
+.content{
+    /* height: 550px; */
+    overflow: hidden;
+}
+
+section{
+    width: 650px;
+    height: 550px;
+    background-color: #ccc;
+    float: left;
+}
+section h3{
+    padding: 10px 0;
+    text-align: center;
+    /* background-color: yellow; 확인용 */
+}
+section article{
+    width: 270px;
+    height: 200px;
+    border: 1px solid #333;
+    float: left;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+section article h4{
+    background: url(../images/kong.png) no-repeat;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+section article p{
+    line-height: 170%;
+    text-align: justify;
+
+}
+
+aside{
+    width: 250px;
+    height: 550px;
+    background-color: #726054;
+    float: left;
+    text-align: center; /*중앙정렬이 상속*/
+}
+aside h3{
+    padding: 10px 0;
+}
+aside img{
+    padding-bottom: 10px;
+    width: 220px;
+}
+footer{
+    /* clear: left; */
+    /* 클리어할시 단점: 마진 탑 하게 되었을때 기준이 섹션 가장위가 되어버려서  */
+    /* margin-top: 50px; 오버플로우 히든 하면 됨*/
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+}

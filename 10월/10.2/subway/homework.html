@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .icon-box {
+      }
+      .icon-box > ul {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .icon-box .icon-img > li {
+        background: url(img/icon_quickmenu.png) no-repeat;
+        width: 70px;
+        height: 70px;
+      }
+      .icon-box ul li a {
+        margin-left: 90px;
+        position: absolute;
+      }
+      ul span {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .icon-box ul li a ul li {
+        color: gray;
+      }
+
+      footer {
+        background-color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="icon-box">
+      <ul class="icon-img">
+        <li>
+          <a href="#">
+            <ul>
+              <span>프랜차이즈</span>
+              <li>개설절차/투자비용 정보</li>
+            </ul>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <ul>
+              <span>지사안내</span>
+              <li>개설절차/투자비용 정보</li>
+            </ul>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ul>
+              <span>광고영상</span>
+              <li>개설절차/투자비용 정보</li>
+            </ul>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ul>
+              <span>고객문의</span>
+              <li>개설절차/투자비용 정보</li>
+            </ul>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li><a href="">써브카드</a></li>
+          <li><a href="">점주관리자</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="seoul">
+          서울시 서초구 강남대로 535 프린스빌딩 15층|대표 : INSOO CHO(인수조)
+          전화 : 02-797-5036 사업자등록번호 : 101-84-04143 SUBWAY® is a
+          Registered Trademark of Subway IP LLC. © 2021 Subway IP LLC. All
+          Rights Reserved.
+          <div class="icon-2"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

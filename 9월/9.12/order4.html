@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .centered{text-align: center;}
+    .container{
+        width: 600px;
+        background-color: bisque;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto;
+        /* 바깥여백 위아래 :0 좌우 오토 마진레프트오토랑 같음*/
+
+    }
+    ul{
+        list-style: none;
+    }
+    label.title{ 
+/* label안에 class가 title인 것에 적용할 스타일 */
+    font-weight: bold;
+    float: left;
+    width: 80px;
+    }
+    fieldset{
+        margin: 15px 10px;
+    }
+    fieldset legend{
+        font-weight: bold;
+        font-size:18px ;
+        color: blueviolet;
+    }
+    ul li{
+        margin-bottom: 10px;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>상품주문서</h1>
+        <form action="">
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="uname" class="title">이름</label>
+                        <input type="text" id="uname" placeholder="여백없이입력" required>
+                    </li>
+                    <li>
+                        <label for="tel1" class="title">연락처</label>
+                        <input type="text" id="tel1" placeholder="연락가능번호" >
+                    </li>
+                </ul>
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="addr" class="title">주소</label>
+                        <input type="text" id="addr" size="40" required>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>주문정보</legend>
+                <ul>
+                    <li>
+                        <label for="test"><input type="checkbox" id="test">과테말라 안티구아(100g)</label>
+                        <label for=""><input type="number" value="0" min="0" max="5"></label>
+                    </li>
+                </ul>
+            </fieldset>
+            </fieldset>
+            <div class="centered">
+                <input type="submit" value="주문하기">
+                <input type="reset" value="다시작성">
+            </div>
+        </form>
+    </div>
+
+
+    <!--  -->
+    <hr>
+    <hr>
+    <h1>연습란</h1>
+<label for="">점유율 0.8</label>
+<meter value="0.4"></meter>
+<label for="">사용량 64%</label>
+<meter min="0" max="100" value="64"></meter>
+<label for="">트래픽초과</label>
+<meter value="10240" min="1024" max="10240" low="2048" high="8192"></meter>
+<label for="">적정 트래픽</label>
+<meter value="0.5" optimum="0.7"></meter>
+
+</body>
+</html>

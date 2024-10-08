@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        border-top: 1px solid black;
+        width: 100%;
+        height: 100%;
+      }
+      .menu{
+        float: right;
+      }
+      .menu ul{
+        list-style: none;
+      }
+      .menu ul li{
+        display: inline-block;
+        padding: 10px 10px 10px 10px;
+      }
+      .header {
+        clear: both;
+        position: relative;
+        border-top: 1px solid #333;
+        height: 150px;
+      }
+      .clogo {
+        background: url(yeonse\ c.png) no-repeat;
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .rlogo {
+        background: url(rlogo.gif) no-repeat;
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .header .nav {
+        display: flex;
+        position: absolute;
+
+        top: 100px;
+        width: 100%;
+        height: 150px;
+      }
+      .header .nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+      .header .nav ul > li {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .header .nav ul:hover .small-menu{
+        opacity: 1;
+        height: 150px;
+        visibility: visible;
+
+      }
+      .header .nav ul li a {
+        text-decoration: none;
+        color: black;
+      }
+      .header .nav ul li .small-menu{
+        display: block;
+        position: absolute;
+        background: white;
+        border: 1px solid black;
+        height: 0%;
+        transition: all 0.3s;
+        opacity: 1;
+        visibility: hidden;
+
+
+      }
+      .header .nav ul li ul .smallmenu{
+        
+        padding:10px 10px;
+
+        
+      }
+      .header .nav ul li ul {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <ul>
+          <li>설문조사</li>
+          <li>NCS평가</li>
+          <li>시험응시</li>
+          <li>회원가입</li>
+          <li>로그인</li>
+          <li>아이디/비밀번호찾기</li>
+          <li>사이트맵</li>
+        </ul>
+      </div>
+      <header class="header">
+        <div class="clogo"></div>
+        <div class="rlogo"></div>
+
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#">교육원소개</a>
+                <ul class="small-menu">
+                  <li class="smallmenu">1</li>
+                  <li class="smallmenu">2</li>
+                  <li class="smallmenu">3</li>
+                </ul>
+            </li>
+            <li><a href="#">국비지원안내</a>
+              <ul class="small-menu">
+                <li class="smallmenu">1</li>
+                <li class="smallmenu">2</li>
+                <li class="smallmenu">3</li>
+              </ul>
+            </li>
+            <li><a href="#">모집일정</a>
+              <ul class="small-menu">
+                <li class="smallmenu">1</li>
+                <li class="smallmenu">2</li>
+                <li class="smallmenu">3</li>
+              </ul>
+            </li>
+            <li><a href="#">교육과정안내</a>  <ul class="small-menu">
+              <li class="smallmenu">1</li>
+              <li class="smallmenu">2</li>
+              <li class="smallmenu">3</li>
+            </ul>
+          </li>
+            <li><a href="#">고교위탁교육</a>  <ul class="small-menu">
+              <li class="smallmenu">1</li>
+              <li class="smallmenu">2</li>
+              <li class="smallmenu">3</li>
+            </ul>
+          </li>
+            <li><a href="#">취업지원센터</a>  <ul class="small-menu">
+              <li class="smallmenu">1</li>
+              <li class="smallmenu">2</li>
+              <li class="smallmenu">3</li>
+            </ul>
+          </li>
+            <li><a href="#">커뮤니티</a>  <ul class="small-menu">
+              <li class="smallmenu">1</li>
+              <li class="smallmenu">2</li>
+              <li class="smallmenu">3</li>
+            </ul>
+          </li>
+          </ul>
+        </nav>
+      </header>
+      <sidebar></sidebar>
+      <footer></footer>
+    </div>
+  </body>
+</html>

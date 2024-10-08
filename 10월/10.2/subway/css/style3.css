@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+header {
+  width: 100%;
+  border-top: 5px solid green;
+  padding-top: 40px;
+}
+#h_top {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+#h_top .logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#h_top ul {
+  position: absolute;
+  right: 30px;
+}

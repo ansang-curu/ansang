@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul,
+li {
+  list-style: none;
+}
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+header {
+  width: 100%;
+  height: 165px;
+  border-top: 5px solid #009223;
+  position: relative;
+}
+#h_top {
+  width: 1200px;
+  height: 90px;
+  margin: 0 auto;
+}
+#h_top > a {
+  position: absolute;
+  /* margin 0 auto로 중앙정렬안됨 */
+  width: 202px;
+  height: 40px;
+  border: 1px solid red;
+  left: 50%;
+  transform: translate(-50%, 0);
+  /* 중앙정렬 */
+  top: 25px;
+}
+#h_top > a img {
+  display: block;
+  width: 100%;
+}
+#h_top ul {
+  /* position: absolute;
+  right: 0;
+  top: 30px;
+  헤더가 릴레이티브라 안됨
+  */
+  float: right;
+  margin-top: 30px;
+}
+
+#h_top ul li {
+  float: left;
+  margin-left: 15px;
+}
+#h_top ul li a {
+  display: block;
+  height: 20px;
+  padding: 5px 13px;
+}
+#h_top ul li a.earth {
+  width: 32.5px;
+  text-indent: -9999px;
+  /* 내어쓰기 글자를 숨길수있다. */
+  padding: 5px 0;
+  background: url(../img/icon_global_subway.png) no-repeat;
+}
+/* -------------------------------nav----------------- */
+nav {
+  width: 100%;
+}
+nav > ul {
+  width: 1200px;
+  height: 75px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 100px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+  /* 중앙정렬해야하므로 넓이지정 */
+}
+nav > ul > li {
+  float: left;
+}
+nav > ul > li > a {
+  /* 대표메뉴 */
+  display: block;
+  width: 200px;
+  height: 75px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 75px;
+}
+nav ul ul a {
+  font-size: 15px;
+  color: #666;
+  padding: 8px 0 9px;
+  display: block;
+  letter-spacing: 0.05;
+  /* 글자간격 */
+  font-weight: bold;
+}
+nav ul li ul li {
+  width: 200px;
+}
+nav ul li ul {
+  position: absolute;
+  top: 75px;
+  text-align: center;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.2s;
+  padding-top: 20px;
+}
+nav ul:hover li ul {
+  height: 200px;
+}
+.shadow {
+  position: absolute;
+  left: 0;
+  top: 165px;
+  /* 헤더가 릴레이티브이므로 */
+  width: 100%;
+  background-color: #fff;
+  height: 0px;
+  transition: all 0.2s;
+}
+nav ul:hover + .shadow {
+  height: 250px;
+}
+/* nav>ul 과 shadow가 동일 선상 형제임. 둘다 position을 가지고 있다. */
+/* --------------------------section */
+
+section {
+  width: 100%;
+}
+.slide {
+  height: 440px;
+  width: 100%;
+  position: relative;
+}
+.slide .sg {
+  width: 1920px;
+  height: 440px;
+  position: absolute;
+  margin: 0 auto;
+}
+.slide .sg a {
+  width: 1920px;
+  height: 440px;
+  position: absolute;
+  left: 0;
+}
+.slide .sg a.i_01 {
+  background: url(../img/00_써브웨이_main_02_20200427112753722.jpg) no-repeat
+    center;
+  /* a안에 클라스 i이기때문에 띄어쓰기 없이 붙여쓴다 */
+}

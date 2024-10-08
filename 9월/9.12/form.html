@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    ul{
+list-style: none;
+}
+/* 블릿없애기 - 앞에 ㄱ */
+    li{line-height: 50px;}
+label{width: 60px; float: left;}
+</style>
+    
+</head>
+<body>
+    <form action="abc.php" method="post">
+        <fieldset>
+            <legend>개인정보</legend>
+        <ul>
+            <li>
+                <label for="r-name">이름</label>
+                <input type="text" name="r-name" id="r-name"></input>
+            </li>
+            <li>
+                <label for="r-tel">연락처</label>
+                <input type="tel" name="r-tel" id="r-tel"></input>
+            </li>
+            <li>
+                <label for="r-email">이메일</label>
+                <input type="text" name="r-email" id="r-email">
+            </li>
+            <li>
+                <input type="submit" value="예약하기">
+            </li>
+        </ul>
+    </fieldset>
+    </form>
+</body>
+</html>
+<!-- id와 name의 쓰임새차이 -->
+ <!--블럭요소?=줄이나눠지기도하고 넓이가 있음(ex: h1), 인라인요소(ex:span,label->float left하면 넓이가짐)
+ 인라인 블럭(ex:이미지)줄바뀜은 존재하지않으나 넓이는 존재  -->
