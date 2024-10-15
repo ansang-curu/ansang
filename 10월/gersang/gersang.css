@@ -141,3 +141,12 @@ nav {
 footer {
   background-color: var(--backgroung-color);
 }
+
+/* 반응형 */
+
+@media (max-width: 800px) {
+  .ad img {
+    width: 100px;
+    height: 100px;
+  }
+}
