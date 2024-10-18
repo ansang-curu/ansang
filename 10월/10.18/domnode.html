@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function addP() {
+        var newP = document.createElement("p");
+        var txtNode = document.createTextNode("dom은 doc...");
+        newP.appendChild(txtNode);
+        document.getElementById("info").appendChild(newP);
+
+        var newImg = document.createElement("img");
+        var srcNode = document.createAttribute("src"); //src 를 들고오는 변수
+        var altNode = document.createAttribute("alt"); //alt를 들고오는 변수
+        srcNode.value = "img/dom1.jpg"; // src를 들고옴 . 데이터만 들고옴 그걸 바꿈
+        altNode.value = "돔 트리 예제 이미지"; //알트들고와서 데이터 가져옴 그걸 바꿈
+        console.log(srcNode);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <a href="#" onclick="addP()">더보기 </a>
+      <div id="info"></div>
+    </div>
+  </body>
+</html>

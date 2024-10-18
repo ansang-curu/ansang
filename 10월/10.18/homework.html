@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .conbtn {
+        display: flex;
+        width: 460px;
+        /* height: 0px; */
+        text-align: center;
+        /* border: 1px solid black; */
+      }
+      .btn1 a,
+      .btn2 a {
+        padding: 0px 20px;
+        border: 1px solid black;
+        width: 200px;
+      }
+
+      .active {
+        color: azure;
+        background-color: #333;
+      }
+      .display {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="conbtn">
+        <div class="btn btn1 active"><a href="#">공지사항</a></div>
+        <div class="btn btn2"><a href="#">보도자료</a></div>
+      </div>
+      <div class="conwrite">
+        <div class="menu menu1">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+        </div>
+        <div class="menu menu2 display">
+          <p>6</p>
+          <p>7</p>
+          <p>8</p>
+          <p>9</p>
+          <p>10</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">!!!</div>
+        <div class="slide">@@@</div>
+        <div class="slide">###</div>
+        <div class="slide">$$$</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let btns = document.querySelectorAll(".btn");
+    let menu1 = document.querySelector(".menu1");
+    let menu2 = document.querySelector(".menu2");
+    let menus = document.querySelectorAll(".menu");
+
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        //버튼 2종류 불러옴 버튼에 각각 이벤트 리스너 부여 클릭시 링크작동안함부여
+
+        btns.forEach(function (b) {
+          b.classList.remove("active");
+        });
+        //각각 버튼들 전부 액티브 삭제
+
+        btn.classList.add("active");
+        //버튼에 액티브 부여
+        menus.forEach(function (c) {
+          c.classList.add("display");
+        });
+        if (btn.classList.contains("btn1")) {
+          menu1.classList.remove("display");
+        } else {
+          menu2.classList.remove("display");
+        }
+      });
+    });
+
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slides .slide");
+    const totalSlides = slides.length;
+    // console.log(totalSlides);
+    function showSlide(index) {
+      const offset = -index * 100;
+      document.querySelector(
+        ".slides"
+      ).style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+    setInterval(nextSlide, 3000);
+  </script>
+</html>
