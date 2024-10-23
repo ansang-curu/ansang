@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener('mousemove',function(){
+       var x=e.clientX;
+       var y=e.clientY;
+       var.element1=document.getElementById('mouse_col');
+       var.element2=document.getElementById('mouse_row');
+
+      })
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        cursor: url(img/bg.png), auto;
+      }
+      html {
+        cursor: url(img/bg.png), auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1 id="mouse_col">0000</h1>
+      <h1 id="mouse_row">0000</h1>
+    </div>
+  </body>
+</html>

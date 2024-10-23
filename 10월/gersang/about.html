@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/gersang.css" />
-    <script src="js/gersang.js" defer></script>
+    <title>{% title %}</title>
+    <link rel="stylesheet" href="css/about.css" />
+    <script src="js/about.js" defer></script>
   </head>
   <body>
     <header>
@@ -63,43 +63,36 @@
     </div>
     <div class="contents">
       <div class="section_wrap">
-        <section class="section1">
-          <h2>소개</h2>
-          <p>
-            이 사이트는 현띠와 상띠의 행복한 생활을 영위하기 위해
-            만들어졌습니다. <br />
-            위의 메뉴는 아직 미완성이며 추후 업데이트 될 예정입니다. <br />
-            아래 메모기능을 활용해서 메모장에 기록 할 수 있습니다. <br />
-            현띠가 요청한 '오늘 뭐먹지?' 기능 구현해보았습니다. <br />
-          </p>
-        </section>
-        <section class="section2">
-          메모 입력<textarea
-            rows="5"
-            style="width: 100%"
-            class="textmemo1"
-          ></textarea>
-          <div class="memoAnswerBox">
-            메모장
-            <textarea
-              rows="5"
-              style="width: 100%"
-              name=""
-              class="textmemo2"
-            ></textarea>
+        <div class="section1">
+          <div class="introduce1">
+            <h2>주요 정보 소개</h2>
+            <br />
+            <p>
+              <a href="#">현주식회사</a>: 식자재 유통 및 판매,
+              <span class="bold">개인정보책임자: 정**</span>
+            </p>
+            <br />
+            <p><a href="#">상띠정보회사(미구현)</a></p>
           </div>
-        </section>
-        <section class="section3">
-          오늘뭐먹지?
-          <div class="todayfood">
-            <button class="btn_todayfood">오늘의음식!</button>
-            <div class="foodAnswer">오늘의음식은 무엇일까요???</div>
-          </div>
-        </section>
+          <div class="introduce2"></div>
+        </div>
+        <div class="section3">
+          <ul>
+            <li>대표이사: 현띠</li>
+            <li>사장: 상띠</li>
+          </ul>
+        </div>
+        <div class="section3">
+          <ul>
+            Contact
+            <li>Tel:000-1234-1234</li>
+            <li>email: ansang@mail.com</li>
+            <li>주소: 중국 스좌장, 중국 황얀</li>
+          </ul>
+        </div>
       </div>
       <div class="sidebar">사이드바</div>
     </div>
-
     <footer>
       <div class="footerbox">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore

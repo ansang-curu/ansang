@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .sub {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="#">ZISHEN</a>
+          <ul class="sub">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Lookbook</a></li>
+            <li><a href="#">Catalogue</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">ZISHEN HOMME</a>
+          <ul class="sub">
+            <li><a href="">About</a></li>
+            <li><a href="">Lookbook</a></li>
+            <li><a href="">Catalogue</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">MEDIA</a>
+          <ul class="sub">
+            <li><a href="">Movie</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Event</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">SERVICE</a>
+          <ul class="sub">
+            <li><a href="">Faq</a></li>
+            <li><a href="">1:1 Service</a></li>
+            <li><a href="">Group Order</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">SHOP INFO</a>
+          <ul class="sub">
+            <li><a href="">Shop Info</a></li>
+            <li><a href="">Open Guide</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">COMPANY</a>
+          <ul class="sub">
+            <li><a href="">Company</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- // nav end -->
+    <!-- <div class="hero"><img src="images/hero.jpg" alt="" /></div> -->
+
+    <!-- 높이를 0으로한다. 클릭시 높이를 생성한다 -->
+    <!-- <script defer>
+      let navs = document.querySelectorAll(".nav>ul>li>a");
+      //   네비의 a링크를 불러온다 전부
+      navs.forEach(function (nav) {
+        nav.addEventListener("click", function (e) {
+          e.preventDefault(); //각각 클릭시 기본작동을 막는다
+          let sub = nav.nextElementSibling; //네비a각 클릭시 ,서브 변수에 네비다음요소를 넣는다 클릭시에 넣는다
+          let subs = document.querySelectorAll(".sub"); // 서브클래스 전부 불러와서
+          subs.forEach(function (sub) {
+            sub.style.height = "0px"; // 높이를 0으로 전부 만든다
+          });
+          if (sub.style.height === "0px" || sub.style.height === "") {
+            //여기서 서브는 렛으로 입력한 변수 서브이며 스타일 조건에 따라 높이 변화를 시킨다
+            sub.style.height = "100%";
+          }
+        });
+      });
+
+      //
+      let subs = document.querySelectorAll(".sub li a");
+      console.log(subs);
+      subs.forEach(function (sub) {
+        sub.addEventListener("click", function (e) {
+          console.log(e);
+        });
+      });
+    </script> -->
+    <!-- ------------------------------------------------------ -->
+    <script defer>
+      const navLinks = document.querySelectorAll(".nav > ul > li > a");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const subMenu = this.nextElementSibling; // 클릭한 링크의 다음 요소(서브 메뉴)
+          const allSubMenus = document.querySelectorAll(".sub"); // 모든 서브 메뉴
+
+          allSubMenus.forEach((sub) => {
+            if (sub !== subMenu) {
+              sub.style.maxHeight = "0"; // 다른 서브 메뉴는 닫기
+            }
+          });
+
+          // 현재 클릭한 서브 메뉴의 상태에 따라 열기/닫기
+          if (
+            subMenu.style.maxHeight === "0px" ||
+            subMenu.style.maxHeight === ""
+          ) {
+            subMenu.style.maxHeight = subMenu.scrollHeight + "px"; // 서브 메뉴 열기
+          } else {
+            subMenu.style.maxHeight = "0"; // 서브 메뉴 닫기
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

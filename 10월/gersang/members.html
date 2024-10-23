@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/gersang.css" />
-    <script src="js/gersang.js" defer></script>
+    <title>{% title %}</title>
+    <link rel="stylesheet" href="css/members.css" />
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="js/members.js" defer></script>
   </head>
   <body>
     <header>
@@ -63,43 +64,29 @@
     </div>
     <div class="contents">
       <div class="section_wrap">
-        <section class="section1">
-          <h2>소개</h2>
-          <p>
-            이 사이트는 현띠와 상띠의 행복한 생활을 영위하기 위해
-            만들어졌습니다. <br />
-            위의 메뉴는 아직 미완성이며 추후 업데이트 될 예정입니다. <br />
-            아래 메모기능을 활용해서 메모장에 기록 할 수 있습니다. <br />
-            현띠가 요청한 '오늘 뭐먹지?' 기능 구현해보았습니다. <br />
-          </p>
-        </section>
-        <section class="section2">
-          메모 입력<textarea
-            rows="5"
-            style="width: 100%"
-            class="textmemo1"
-          ></textarea>
-          <div class="memoAnswerBox">
-            메모장
-            <textarea
-              rows="5"
-              style="width: 100%"
-              name=""
-              class="textmemo2"
-            ></textarea>
+        <div class="section1">
+          <div class="member">
+            <img src="images/member1.jpg" alt="멤버1" class="img1" />
+            <ul>
+              이름 : 안
+              <li>직책 : 사장</li>
+              <li>담당 : 잡일</li>
+              <li>시키면 시키는대로 뭐 잡일이나 청소함. 쉬는걸 좋아함</li>
+            </ul>
           </div>
-        </section>
-        <section class="section3">
-          오늘뭐먹지?
-          <div class="todayfood">
-            <button class="btn_todayfood">오늘의음식!</button>
-            <div class="foodAnswer">오늘의음식은 무엇일까요???</div>
+          <div class="member">
+            <img src="images/member2.jpg" alt="멤버2" class="img2" />
+            <ul>
+              이름 : 현
+              <li>직책 : 대표이사</li>
+              <li>담당 : 기둥</li>
+              <li>회사의 기둥. 더설명 필요없음.</li>
+            </ul>
           </div>
-        </section>
+        </div>
       </div>
       <div class="sidebar">사이드바</div>
     </div>
-
     <footer>
       <div class="footerbox">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore

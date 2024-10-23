@@ -27,7 +27,9 @@ header {
 h1 {
   margin: 20px 0px;
   text-align: center;
+  cursor: pointer;
 }
+
 nav {
   background-color: var(--main-color);
   /* display: flex; */
@@ -99,8 +101,22 @@ nav {
 .section1 {
   background-color: var(--backgroung-color);
   border: 1px solid #333;
+  display: flex;
+  justify-content: space-around;
 }
-
+.introduce1 {
+  padding: 10px;
+  line-height: 26px;
+}
+.bold {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.introduce2 {
+  padding: 10px;
+  line-height: 26px;
+}
 /* -------------섹션2-------------- */
 .section2 {
   background-color: var(--main-color);
@@ -143,8 +159,13 @@ footer {
 }
 
 /* 반응형 */
+@media (max-width: 425px) {
+  .sidebar {
+    display: none;
+  }
+}
 
-@media (max-width: 800px) {
+@media (min-width: 426px), (max-width: 800px) {
   .ad img {
     width: 100px;
     height: 100px;

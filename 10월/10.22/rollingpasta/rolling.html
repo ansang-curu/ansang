@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      background: url(images/intro_bg.png);
+      padding: 80px;
+      display: flex;
+      height: 350px;
+    }
+    .box1 {
+      background: url(images/intro_logo.png) no-repeat;
+      flex: 1;
+      width: 140px;
+      height: 250px;
+    }
+    .box2 {
+      flex: 4;
+      flex-direction: column;
+    }
+    .box3-1 {
+      text-align: center;
+      padding-bottom: 50px;
+    }
+    .bold {
+      font-size: 22px;
+      font-weight: 700;
+      color: #003b5a;
+    }
+    .box3-2 {
+      display: flex;
+      justify-content: space-around;
+    }
+    .box4.b1 {
+      background: url(images/intro_slide_ico1.png) no-repeat;
+      width: 150px;
+      height: 150px;
+      background-size: contain;
+    }
+    .box4.b2 {
+      background: url(images/intro_slide_ico2.png) no-repeat;
+      width: 150px;
+      height: 150px;
+    }
+    .box4.b3 {
+      background: url(images/intro_slide_ico3.png) no-repeat;
+      width: 150px;
+      height: 150px;
+    }
+    .box4.b4 {
+      background: url(images/intro_slide_ico4.png) no-repeat;
+      width: 150px;
+      height: 150px;
+    }
+  </style>
+
+  <body>
+    <div class="wrap">
+      <div class="box1"></div>
+      <div class="box2">
+        <div class="box3-1">
+          <img src="images/intro_img.png" alt="" />
+          <p class="bold">이탈리안 파스타의 캐주얼한 해석</p>
+          <p>본질만 담은 합리적인 가격으로 맛있는 파스타와 잔와인까지,</p>
+          <br />
+          <p>부담없이 즐기고 가실 수 있는 곳입니다.</p>
+        </div>
+        <div class="box3-2">
+          <div class="box4 b1"></div>
+          <div class="box4 b2"></div>
+          <div class="box4 b3"></div>
+          <div class="box4 b4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script defer>
+    //마우스 호버시 css의 백그라운드이미지 url속성을 바꾼다
+    let box4 = document.querySelectorAll(".box4");
+    box4.forEach(function (e) {
+      let num = e.classList[1].replace("b", ""); // 'b1' -> '1', 'b2' -> '2' 등
+      console.log(num);
+
+      e.addEventListener("mouseover", function (m) {
+        e.style.background = `url(images/intro_slide_ico${num}_on.png) no-repeat`;
+      });
+      e.addEventListener("mouseout", function () {
+        // 마우스가 나갔을 때 원래 배경으로 복원 (옵션)
+        e.style.background = `url(images/intro_slide_ico${num}.png) no-repeat`;
+      }); // 원래 상태로 복원
+    });
+  </script>
+</html>

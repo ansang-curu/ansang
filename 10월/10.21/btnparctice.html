@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버튼 클릭 예제</title>
+    <style>
+      .active {
+        background-color: #333;
+        color: white;
+      }
+      .content {
+        display: none;
+      }
+      .content.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="btn" data-target="content1">버튼 1</button>
+      <button class="btn" data-target="content2">버튼 2</button>
+      <button class="btn" data-target="content3">버튼 3</button>
+    </div>
+    <div class="content" id="content1">콘텐츠 1</div>
+    <div class="content" id="content2">콘텐츠 2</div>
+    <div class="content" id="content3">콘텐츠 3</div>
+
+    <script>
+      let buttons = document.querySelectorAll(".btn");
+      let contents = document.querySelectorAll(".content");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // 모든 버튼에서 active 클래스 제거
+          buttons.forEach((btn) => btn.classList.remove("active"));
+          // 클릭한 버튼에 active 클래스 추가
+          button.classList.add("active");
+
+          // 모든 콘텐츠 숨기기
+          contents.forEach((content) => content.classList.remove("active"));
+          // 클릭한 버튼에 해당하는 콘텐츠 표시
+          let targetContent = document.getElementById(button.dataset.target);
+          targetContent.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

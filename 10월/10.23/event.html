@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("#btn1").click(function () {
+          $("#textZone").css("color", "blue");
+          //$선택자.css(속성,속성값)
+        });
+        $("#btn2").mouseover(function () {
+          $("#textZone").css("background-color", "yellow");
+        });
+        $("#btn3").focus(function () {
+          $("#textZone").css("background-color", "purple");
+        });
+        $("#btn4").bind(
+          "focus mouseover"(function () {
+            $("#textZone").css("background-color", "red");
+          })
+        );
+        //두가지 이상의 마우스 이벤트를 적용하려면 바인드
+      });
+    </script>
+  </head>
+  <body>
+    <p id="textZone">텍스트존</p>
+    <p><button id="btn1">click</button></p>
+    <p><button id="btn2">click</button></p>
+    <p><button id="btn3">click</button></p>
+    <p><button id="btn4">click</button></p>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+/* 변수입력 */
+:root {
+  --main-color: #606c38; /* 기본 색상 */
+  --secondary-color: #283618; /* 보조 색상 */
+  --backgroung-color: #fefae0; /* 배경색 */
+  --thirdary-color: #dda15e; /*보조2 색상*/
+  --side-color: #bc6c25; /*사이드 색상*/
+}
+
+/* 기본셋팅 */
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+/* 헤더셋팅 */
+header {
+  border: 1px solid #333;
+  background-color: var(--backgroung-color);
+}
+h1 {
+  margin: 20px 0px;
+  text-align: center;
+  cursor: pointer;
+}
+
+nav {
+  background-color: var(--main-color);
+  /* display: flex; */
+  /* width: 100%; */
+}
+.ul1 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.li1 {
+  position: relative;
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+.ul2 {
+  text-align: center;
+  overflow: hidden;
+  max-height: 0;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.8s;
+  left: 50%;
+  /* transform: translateX(-100%); */
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+.li2 {
+  padding: 5px;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  min-width: 100px;
+}
+.li2 a {
+  color: var(--backgroung-color);
+  /* white-space: nowrap; */
+  /* width: 100%; */
+}
+.li1:hover .ul2 {
+  /* display: block; */
+  visibility: visible;
+  max-height: 200px;
+  opacity: 1;
+}
+/* 광고판 */
+.ad {
+  background-color: var(--backgroung-color);
+  display: flex;
+  justify-content: space-around;
+}
+.ad img {
+  width: 200px;
+  height: 200px;
+}
+/*광고판 반응형을 위해 max width ,height 으로 가능*/
+
+/* 콘텐츠 */
+.contents {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  /* position: absolute; */
+}
+.section_wrap {
+  width: 100%;
+}
+/* -----------섹션1--------------- */
+.section1 {
+  background-color: var(--backgroung-color);
+  border: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+}
+.introduce1 {
+  padding: 10px;
+}
+.introduce1 .bold {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--main-color);
+}
+.introduce2 {
+  padding: 10px;
+}
+/* -------------섹션2-------------- */
+.section2 {
+  background-color: var(--main-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.section2 textarea {
+  background-color: var(--backgroung-color);
+  margin: 10px 0px;
+}
+
+/* ----------------섹션3-------------- */
+.section3 {
+  font-size: larger;
+  background-color: var(--thirdary-color);
+  text-align: center;
+  padding: 10px;
+}
+.section3 .btn_todayfood {
+  padding: 10px;
+  margin: 10px 0px;
+  background-color: var(--side-color);
+}
+
+/* 사이드바 */
+.sidebar {
+  background-color: var(--side-color);
+  border: 1px solid #333;
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 200px;
+}
+/* 푸터 */
+
+footer {
+  background-color: var(--backgroung-color);
+}
+
+/* 반응형 */
+@media (max-width: 425px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: 426px), (max-width: 800px) {
+  .ad img {
+    width: 100px;
+    height: 100px;
+  }
+}
+/*-------------------------장수-----------------------------*/
+.jangsuSection p {
+  line-height: 30px;
+}
