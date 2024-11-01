@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.1.js"></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      position: relative;
+      width: 450px;
+      height: 350px;
+      background-color: orange;
+    }
+    .box1 {
+      position: relative;
+      height: 80px;
+      width: 430px;
+    }
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 50px;
+      font-size: 22px;
+    }
+    .logo2 {
+      position: absolute;
+      top: 30px;
+      left: 280px;
+    }
+    .iconbox {
+      position: absolute;
+      top: 30px;
+      right: 10px;
+    }
+    .iconbox img {
+      margin: 5px;
+      cursor: pointer;
+    }
+    .bbox {
+      overflow: hidden;
+      width: 350px;
+      margin: 0 auto;
+    }
+    .box2 {
+      display: flex;
+
+      top: 80px;
+      left: 50px;
+
+      border: 1px solid red;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="box1">
+        <div class="logo">홍보존</div>
+        <div class="logo2"><span>1 </span>/ 4</div>
+        <div class="iconbox">
+          <img src="ico_16_prev.png" alt="" class="prev" />
+          <img src="ico_16_pause.png" alt="" class="pause" />
+          <img src="ico_16_next.png" alt="" class="next" />
+        </div>
+      </div>
+      <div class="bbox">
+        <div class="box2">
+          <img src="1.png" alt="" />
+          <img src="2.png" alt="" />
+          <img src="3.png" alt="" />
+          <img src="4.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script defer>
+  $(function () {
+    clone = $(".box2 img:eq(0)").clone();
+    $(".box2").append(clone);
+    // 첫 이미지 복사하여 넣움
+    i = 0;
+    let length = $(".box2 img").length;
+    console.log(length);
+    //기본셋팅
+    $(".next").click(function () {
+      if (i == 3) {
+        i = 0;
+
+        $(".box2")
+          .stop()
+          .animate(
+            { "margin-left": -(length - 1) * 100 + "%" },
+            600,
+            function () {
+              $(".box2").css("margin-left", 0);
+            }
+          );
+
+        $(".logo2 span")
+          .add()
+          .text(i + 1 + " ");
+        return;
+      }
+      //i가3일때 함수
+
+      i++;
+      //   $(".box2").css("margin-left", -i * +"350px");
+      $(".box2")
+        .stop()
+        .animate({ "margin-left": -i * 100 + "%" }, 600);
+      //슬라이드
+      $(".logo2 span")
+        .add()
+        .text(i + 1 + " ");
+      //로고2숫자변경
+    });
+
+    $(".prev").click(function () {
+      if (i == 0) {
+        $(".box2").css("margin-left", (length - 1) * -100 + "%");
+        i = 3;
+
+        $(".box2")
+          .stop()
+          .animate({ "margin-left": -i * 100 + "%" }, 600);
+
+        $(".logo2 span")
+          .add()
+          .text(i + 1 + " ");
+        return;
+      }
+      //i가 0일때 함수
+
+      i--;
+      //   $(".box2").css("margin-left", -i * +"350px");
+      $(".box2")
+        .stop()
+        .animate({ "margin-left": -i * 100 + "%" }, 600);
+      //슬라이드
+      $(".logo2 span")
+        .add()
+        .text(i + 1 + " ");
+      //로고2숫자변경
+    });
+  });
+</script>

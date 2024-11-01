@@ -1,5 +1,5 @@
 공유주소
-\\192.168.71.200
+\\192.168.71.195
 
 
 웨일온
@@ -9,3 +9,23 @@
 비밀번호: 174424
 
 https://whaleon.us/o/CSqqEb/483e7266af284010a0c3568c26acdef2
+
+깃허브를 깐다
+vs코드에서 터미널 실행해서 깃으로 inti add commit push를 해서 올린다
+pull로 땡기기 가능
+clone으로 복사가능
+업데이트 하는거? 모름
+(지역저장소에서는 그냥 업데이트 가능할거 같음)
+
+#10.22
+box4.forEach(function (e) {
+      let num = e.classList[1].replace("b", ""); 
+// e는 돔요소 클래스리스트의 2번째 데이터를 대체한다 b를 공백으로
+// 여기서 확인점은 e가 돔요소
+
+ e.addEventListener("mouseover", function (m) {
+        e.style.background = `url(images/intro_slide_ico${num}_on.png) no-repeat`;
+      });
+//여기서 e도 돔요소, m은 '이벤트에 대한' 정보를 담고 있는 '객체' (예를들면 마우스오버했을때의 좌표라던지, 키보드다운이면 그키가 무엇이냐든지)
+//여기서 확인점은 e와m의 쓰임새차이!
+

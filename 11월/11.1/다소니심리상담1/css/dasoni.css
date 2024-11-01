@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.cf::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "NanumSquare", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1000px;
+  height: 3000px;
+}
+
+.wrap {
+  width: 100%;
+}
+.header_out {
+}
+.header_line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background: url(../img/header_line.png) no-repeat 50% 100%;
+}
+/* 헤더라인 위 */
+/* 네비시작 */
+.gnb {
+  /* overflow: hidden; */
+  background-color: aquamarine;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  border: 1px solid red;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+}
+
+.menu > li {
+  text-align: center;
+  padding: 0px;
+  border: 1px solid blue;
+  /* height: 30px; */
+  position: relative;
+}
+.menu > li a {
+  padding: 5px;
+  border: 1px solid green;
+}
+.menu li ul {
+  /* position: absolute; */
+  /* position: relative; */
+  /* z-index: 1000; */
+  padding: 10px;
+  margin: 6px;
+
+  transition: all 0.5s;
+}
+.menu li ul li {
+  padding: 10px;
+}
+.menu li:hover ul {
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 10;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      nav {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: all 0.5s;
+      }
+      nav.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      nav ul {
+        width: 1000px;
+        height: 100px;
+        margin: 0 auto;
+      }
+      nav ul li {
+        float: left;
+      }
+      nav ul li a {
+        display: block;
+        width: 166px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 1.5em;
+        color: #fff;
+        text-align: center;
+      }
+      nav ul li.on a {
+        color: orange;
+      }
+      section > div {
+        width: 100%;
+        height: 100vh;
+      }
+      section > div p {
+        color: #fff;
+        padding: 8px;
+      }
+      #area1 {
+        background-color: aquamarine;
+      }
+      #area2 {
+        background-color: salmon;
+      }
+      #area3 {
+        background-color: blueviolet;
+      }
+      #area4 {
+        background-color: chartreuse;
+      }
+      #area5 {
+        background-color: darkkhaki;
+      }
+      #area6 {
+        background-color: fuchsia;
+      }
+
+      #floatdiv {
+        width: 70px;
+        height: 300px;
+        background-color: dimgray;
+        padding-top: 10px;
+        position: absolute;
+        right: 50px;
+        top: 250px;
+      }
+
+      #floatdiv ul li {
+        width: 25px;
+        height: 25px;
+        border-radius: 13px;
+        background-color: #fff;
+        margin-left: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      #floatdiv ul li.on {
+        background-color: orange;
+      }
+
+      #popup {
+        width: 301px;
+        height: 351px;
+        position: absolute;
+        top: 210px;
+        left: 50px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        display: none;
+      }
+    </style>
+    <script defer>
+      $(function () {
+        var dTop = $("#floatdiv").offset().top;
+        // var dTop = 250;
+        //alert(dTop);
+        $(window).scroll(function () {
+          var sct = $(window).scrollTop();
+          $("#sTop").text(sct);
+          if (sct >= 100) {
+            $("nav").addClass("fixed");
+          } else {
+            $("nav").removeClass("fixed");
+          }
+
+          $("#floatdiv")
+            .stop()
+            .animate({ top: dTop + sct }, 500);
+
+          if (sct >= $("section>div").eq(0).offset().top) {
+            $("nav ul li").removeClass("on");
+            $("nav ul li").eq(0).addClass("on");
+            $("#floatdiv ul li").removeClass("on");
+            $("#floatdiv ul li").eq(0).addClass("on");
+          }
+          if (sct >= $("section>div").eq(1).offset().top) {
+            $("nav ul li").removeClass("on");
+            $("nav ul li").eq(1).addClass("on");
+            $("#floatdiv ul li").removeClass("on");
+            $("#floatdiv ul li").eq(1).addClass("on");
+          }
+          if (sct >= $("section>div").eq(2).offset().top) {
+            $("nav ul li").removeClass("on");
+            $("nav ul li").eq(2).addClass("on");
+            $("#floatdiv ul li").removeClass("on");
+            $("#floatdiv ul li").eq(2).addClass("on");
+          }
+          if (sct >= $("section>div").eq(3).offset().top) {
+            $("nav ul li").removeClass("on");
+            $("nav ul li").eq(3).addClass("on");
+            $("#floatdiv ul li").removeClass("on");
+            $("#floatdiv ul li").eq(3).addClass("on");
+          }
+          if (sct >= $("section>div").eq(4).offset().top) {
+            $("nav ul li").removeClass("on");
+            $("nav ul li").eq(4).addClass("on");
+            $("#floatdiv ul li").removeClass("on");
+            $("#floatdiv ul li").eq(4).addClass("on");
+          }
+          if (sct >= $("section>div").eq(5).offset().top) {
+            $("nav ul li").removeClass("on");
+            $("nav ul li").eq(5).addClass("on");
+            $("#floatdiv ul li").removeClass("on");
+            $("#floatdiv ul li").eq(5).addClass("on");
+          }
+        });
+
+        $("nav ul li").click(function () {
+          var i = $(this).index();
+          // alert(i);
+          var offset_nav = $("section>div").eq(i).offset().top;
+          //alert(offset_nav);
+          $("html,body").stop().animate({ scrollTop: offset_nav }, 1000);
+          //스크롤을 offset_nav만큼움직인다.
+          // $('nav ul li').removeClass('on');
+          //$('nav ul li').eq(i).addClass('on');
+          return false;
+        });
+
+        $("#floatdiv ul li").click(function () {
+          var i = $(this).index();
+          // alert(i);
+          var offset_nav = $("section>div").eq(i).offset().top;
+
+          $("html,body").stop().animate({ scrollTop: offset_nav }, 1000);
+          return false;
+        });
+
+        // $("section>div").mousewheel(function (event, d) {
+        //   //event 마우스휠의 정보
+        //   //d는 이동방향 휠 위로 하면 1 휠 아래로하면 -1
+        //   //   console.log(d);
+        //   if (d > 0) {
+        //     var prev = $(this).prev().offset().top;
+        //     $("html,body")
+        //       .stop()
+        //       .animate({ scrollTop: prev }, 1000, "easeOutBounce");
+        //   }
+        //   if (d < 0) {
+        //     var next = $(this).next().offset().top;
+        //     $("html,body")
+        //       .stop()
+        //       .animate({ scrollTop: next }, 1000, "easeOutBounce");
+        //   }
+        // });
+
+        $("#popup").draggable();
+
+        if ($.cookie("pop") != "no") {
+          $("#popup").show();
+        }
+        $("#popup area:eq(0)").click(function () {
+          $("#popup").fadeOut("fast");
+        });
+        $("#popup area:eq(0)").click(function () {
+          console.log("Area clicked!"); // 확인용 로그
+          $("#popup").fadeOut("fast");
+        });
+        $("#popup area:eq(1)").click(function () {
+          $.cookie("pop", "no", { exprires: 1 });
+          $("#popup").fadeOut("fast");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>현재스크롤위치 : <span id="sTop">000</span></h1>
+    <nav>
+      <ul>
+        <li class="on"><a href="#">Mainmenu1</a></li>
+        <li><a href="#">Mainmenu2</a></li>
+        <li><a href="#">Mainmenu3</a></li>
+        <li><a href="#">Mainmenu4</a></li>
+        <li><a href="#">Mainmenu5</a></li>
+        <li><a href="#">Mainmenu6</a></li>
+      </ul>
+    </nav>
+    <section>
+      <div id="area1" class="main"><p>area1</p></div>
+      <div id="area2" class="main"><p>area2</p></div>
+      <div id="area3" class="main"><p>area3</p></div>
+      <div id="area4" class="main"><p>area4</p></div>
+      <div id="area5" class="main"><p>area5</p></div>
+      <div id="area6" class="main"><p>area6</p></div>
+    </section>
+
+    <div id="floatdiv">
+      <ul>
+        <li class="on"><span id="btn1"></span></li>
+        <li><span id="btn2"></span></li>
+        <li><span id="btn3"></span></li>
+        <li><span id="btn4"></span></li>
+        <li><span id="btn5"></span></li>
+        <li><span id="btn6"></span></li>
+      </ul>
+    </div>
+    <div id="popup">
+      <img src="images (5)/popup.jpg" alt="#" usemap="#pop" />
+      <map name="pop" id="pop">
+        <area shape="rect" coords="250,330,295,348" href="#" alt="창닫기" />
+        <area
+          shape="rect"
+          coords="95,332,215,345"
+          href="#"
+          alt="오늘 하루 열지않음"
+        />
+      </map>
+    </div>
+    <div id="notice_wrap">
+      <img src="images (5)/popup1.jpg" alt="공지사항" />
+      <p class="closeWrap">
+        <input type="checkbox" name="expiresChk" id="expiresChk" />
+        <label for="expiresChk">3일동안 이 창 열지않기</label>
+        <button class="closeBtn">닫기</button>
+      </p>
+    </div>
+  </body>
+</html>

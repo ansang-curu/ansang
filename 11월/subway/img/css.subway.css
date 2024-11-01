@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrap {
+  width: 1920px;
+  height: 2000px;
+  position: relative;
+  overflow-x: hidden;
+}
+/* 헤더 */
+.header_wrap {
+  position: absolute;
+  width: 1920px;
+  /* max-width: 1920px; */
+  /* min-width: 1920px; */
+  height: 140px;
+  border-top: 10px solid green;
+  /* border: 1px solid red;  350으로 변경*/
+
+  transition: all 0.5s ease-in;
+  background-color: #fff;
+  z-index: 1;
+  overflow: hidden;
+}
+header {
+  width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav > ul {
+  /* clear: both; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 5%;
+  position: relative;
+}
+/* nav > ul > li {
+} */
+nav > ul > li > a {
+  padding: 10px 20px;
+}
+nav > ul > li > ul {
+  /* position: absolute; */
+  padding: 10px;
+}
+nav > ul > li > ul > li {
+  padding: 5px;
+}
+nav > ul > li > ul > li a {
+  padding: 5px;
+}
+/* nav ul li:hover > a {
+  color: green;
+} */
+/* 슬라이더 이미지 */
+.backImgBox {
+  width: 1920px;
+  padding-top: 150px;
+  /* display: flex; */
+}
+.backImgBox ul {
+  display: flex;
+  /* overflow-x: hidden; */
+}
+.backImgBox .backImg1 a {
+  display: block;
+  width: 1920px;
+  height: 440px;
+  background: url(00_써브웨이_main_02_20200427112753722.jpg);
+}
+.backImgBox .backImg2 a {
+  display: block;
+  width: 1920px;
+  height: 440px;
+  background: url(main_pc_1920x440_20200427112254027.jpg);
+}
+.backImgBox .backImg3 a {
+  display: block;
+  width: 1920px;
+  height: 440px;
+  background: url(main_pc_1920x440_20200528061058713.jpg);
+}
+.backImgBox .backImg4 a {
+  display: block;
+  width: 1920px;
+  height: 440px;
+  background: url(main_pc_1920x440_20200529050816305.jpg);
+}
+
+/* 슬릭위치변경 */
+.slick-dots {
+  position: absolute; /* 위치를 절대적으로 조정 */
+  top: 380px;
+  left: 1000px;
+}
+/* 슬릭 생성시 생성한것과 동일 형제선상으로 생김 */

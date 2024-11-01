@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="bxslider-4-master/src/js/jquery.bxslider.js"></script>
+    <script defer>
+      $(function () {
+        $(".bxslider").bxSlider({
+          mode: "fade",
+          captions: true,
+          slideWidth: 600,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="bxslider">
+      <div><img src="img/w1.JPG" title="img1" /></div>
+      <div><img src="img/w2.JPG" title="img2" /></div>
+      <div><img src="img/w3.JPG" title="img3" /></div>
+      <div><img src="img/w4.JPG" title="img4" /></div>
+    </div>
+  </body>
+</html>
