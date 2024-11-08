@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+      ul li a strong {
+        display: block;
+      }
+      ul li a em {
+        display: none;
+      }
+      ul li a:hover strong {
+        display: none;
+      }
+      ul li a:hover em {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="gnb">
+      <li>
+        <a href=""><img src="images/menu01_out.png" alt="" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/menu02_out.png" alt="" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/menu03_out.png" alt="" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/menu04_out.png" alt="" /></a>
+      </li>
+    </ul>
+  </body>
+  <script>
+    let links = document.querySelectorAll(".gnb li a");
+
+    links.forEach(function (구멍) {
+      구멍.addEventListener("mouseenter", function () {
+        let img = 구멍.querySelector("img");
+        img.src = img.src.replace("out", "over");
+      });
+
+      구멍.addEventListener("mouseleave", function () {
+        let img = 구멍.querySelector("img");
+        img.src = img.src.replace("over", "out");
+      });
+    });
+  </script>
+</html>

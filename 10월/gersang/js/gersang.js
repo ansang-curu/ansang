@@ -59,3 +59,28 @@ function addmemo(add) {
   }
 }
 // --------------------------------------------
+//계산기----------------------------------------------
+
+$(".btns button").click(function () {
+  let currentInput = $(".calculInput").val();
+  let btntext = $(this).text();
+
+  if (btntext === "=") {
+    try {
+      let answer = math.evaluate(currentInput); // math.js 사용
+      $(".calculInput").val(answer); // 결과를 입력 필드에 설정
+      // alert(answer); // 결과를 알림으로 표시
+    } catch (error) {
+      $(".calculInput").val("Error"); // 오류 발생 시 "Error" 표시
+    }
+  } else if (btntext === "+-") {
+    let minus = currentInput * -1;
+    $(".calculInput").val(minus);
+  } else {
+    $(".calculInput").val(currentInput + btntext); // 버튼 텍스트를 입력 필드에 추가
+  }
+});
+
+$(".btns .clearBtn").click(function () {
+  $(".calculInput").val("");
+});

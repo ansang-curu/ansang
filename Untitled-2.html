@@ -1,16 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>프론트앤드 웹개발</h1>
-    <hr>
-    <!-- br수평줄을 만들어준다  -->
-     <p>html</p>
-     <p>Css</p>
-     <p>자바스크립트</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .calculator {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      .display {
+        width: 100%;
+        height: 60px;
+        font-size: 2rem;
+        border: none;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 10px;
+        text-align: right;
+        background-color: #e9e9e9;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      button {
+        width: 100%;
+        height: 60px;
+        font-size: 1.5rem;
+        border: 1px solid #ddd;
+        background-color: #f7f7f7;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #e9e9e9;
+      }
+
+      .operator {
+        background-color: #f9a825;
+        color: white;
+      }
+
+      .operator:hover {
+        background-color: #f57f17;
+      }
+
+      .zero {
+        grid-column: span 2; /* 0 버튼을 두 개 열을 차지하게 함 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" class="display" disabled />
+      <div class="buttons">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">/</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="operator">*</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="operator">-</button>
+        <button class="zero">0</button>
+        <button class="operator">.</button>
+        <button class="operator">=</button>
+        <button class="operator">+</button>
+      </div>
+    </div>
+  </body>
 </html>

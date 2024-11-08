@@ -163,3 +163,42 @@ footer {
 .jangsuSection p {
   line-height: 30px;
 }
+
+/* 계산기 */
+.calcul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #f0f0f0;
+}
+.calcul button {
+  width: 100%;
+  height: 60px;
+  font-size: 1.5rem;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #e9e9e9;
+}
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.zero {
+  grid-column: span 2; /* 0 버튼을 두 개 열을 차지하게 함 */
+}
+button.operator {
+  background-color: #f9a825;
+  color: white;
+}
+.operator:hover {
+  background-color: #f57f17;
+}
+.calculInput {
+  text-align: center;
+  height: 20px;
+}

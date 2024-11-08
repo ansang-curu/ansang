@@ -1,0 +1,31 @@
+@import url(gersang.css);
+@import url(media.css);
+.eventBox img {
+  /* border: 1px solid #333; */
+  width: 100%;
+  height: auto;
+}
+.eventBox {
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  width: 600px;
+  height: 600px;
+}
+.slick-prev::before,
+.slick-next::before {
+  color: #333;
+  font-size: 30px;
+}
+/* 위에 버튼 뭔가 문제있다. */
+.slick-prev {
+  left: 10px;
+}
+.slick-next {
+  right: 10px;
+}
+.eventBox .eventContent {
+  position: absolute;
+  top: 20px;
+  color: pink;
+  font-size: 30px;
+}

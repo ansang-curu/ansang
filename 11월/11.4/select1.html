@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <form action="#" method="get" name="rel_f">
+      <fieldset>
+        <legend>관련사이트이동</legend>
+        <select name="rel_select" id="rel_select">
+          <option value="http://nl.go.kr">국립중앙도서관</option>
+          <option value="http://google.co.kr">국회도서관</option>
+          <option value="http://komodo.dothome.co.kr">국가전자도서관</option>
+        </select>
+        <input
+          type="image"
+          src="images/rel_site_btn.gif"
+          alt="관련사이트이동"
+        />
+      </fieldset>
+    </form>
+    <script>
+      let form = document.forms["rel_f"];
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); //폼 기본 제출방지
+        let url = form.rel_select.value;
+        //폼 안에서 rel셀렉 이름 가진 밸류 찾기 셀렉을 변수로만들어서 써도됨
+        window.open(url);
+      });
+    </script>
+  </body>
+</html>
