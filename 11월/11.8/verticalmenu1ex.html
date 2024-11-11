@@ -38,7 +38,7 @@
       .m_menu .sub {
         height: 0;
         overflow: hidden;
-        transition: all 0.4s;
+        transition: all 1s;
         display: none;
       }
 
@@ -98,7 +98,10 @@
         $(".m_menu li").click(function () {
           $(".sub").css("display", "none");
           $(this).find(".sub").css("display", "block");
-          $(this).find(".sub").css("height", "auto");
+          $(".sub").css("height", "0px");
+          $(this)
+            .find(".sub")
+            .css("height", 36 * 3 + "px");
         });
       });
     </script>
