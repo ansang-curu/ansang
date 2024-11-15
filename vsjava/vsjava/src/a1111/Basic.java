@@ -7,5 +7,8 @@ public class Basic {
     int y = 2;
     int result=x+y;
     System.out.println(result);
+  System.out.println("헬로우");  
+  System.out.println("\"월드\"");  
   }
+  
 }

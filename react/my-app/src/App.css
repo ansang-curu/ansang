@@ -1,7 +1,17 @@
 .App {
   text-align: center;
 }
-
+.black-nav {
+  background-color: blue;
+}
+.modal {
+  text-align: left;
+  background-color: antiquewhite;
+}
+.list {
+  text-align: left;
+  border-bottom: 1px solid grey;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
