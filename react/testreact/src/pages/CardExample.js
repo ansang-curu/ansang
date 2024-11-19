@@ -3,11 +3,14 @@ import Card from "react-bootstrap/Card";
 import Placeholder from "react-bootstrap/Placeholder";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function CardExample(props) {
   let { id } = useParams();
   let idt = id - 1;
   let navigate = useNavigate();
+  let [tab, setTab] = useState(0);
+  let [isActive, setIsActive] = useState(false);
 
   return (
     <>
@@ -32,7 +35,9 @@ function CardExample(props) {
           </Card.Body>
         </Card>
 
-        <Card style={{ width: "18rem" }}>
+        {/* UI만들기 버튼012  */}
+
+        {/* <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
             <Placeholder as={Card.Title} animation="glow">
@@ -45,10 +50,58 @@ function CardExample(props) {
             </Placeholder>
             <Placeholder.Button variant="primary" xs={6} />
           </Card.Body>
-        </Card>
+        </Card> */}
       </div>
+      <Button
+        variant="outline-primary"
+        onClick={() => {
+          setTab(0);
+        }}
+      >
+        버튼0
+      </Button>
+      <Button
+        variant="outline-primary"
+        onClick={
+          // setIsActive((isActive) => !isActive);
+
+          () => {
+            setTab(1);
+          }
+        }
+        active={isActive}
+      >
+        버튼1
+      </Button>
+      <Button
+        variant="outline-primary "
+        onClick={() => {
+          setTab(2);
+        }}
+      >
+        버튼2
+      </Button>
+      <TabContent tab={tab} data={props.data} />
     </>
   );
+  function TabContent({ tab, data }) {
+    let [fade, setFade] = useState("");
+
+    useEffect(() => {
+      setFade("end");
+    }, [tab]);
+
+    return (
+      <div className={`start ${fade}`}>
+        {[<div>{data[0].title}</div>, <div>내용1</div>, <div>내용2</div>][tab]}
+      </div>
+    );
+    // <>
+    //   {tab == 0 && <div>내용0</div>}
+    //   {tab == 1 && <div>내용1</div>}
+    //   {tab == 2 && <div>내용2</div>}
+    // </>;
+  }
 }
 
 export default CardExample;

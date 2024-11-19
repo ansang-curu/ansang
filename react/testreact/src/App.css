@@ -21,6 +21,14 @@
   height: 100%;
   margin-top: 30px;
 }
+.start {
+  transition: all 0.5s;
+  opacity: 0;
+}
+.end {
+  opacity: 1;
+  transition: 0.5s;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

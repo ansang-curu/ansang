@@ -21,8 +21,8 @@ function Main() {
               <Nav.Link as={Link} to="/news" style={{ marginLeft: "20px" }}>
                 News
               </Nav.Link>
-              <Nav.Link as={Link} to="/" style={{ marginLeft: "20px" }}>
-                Community
+              <Nav.Link as={Link} to="/cart" style={{ marginLeft: "20px" }}>
+                장바구니
               </Nav.Link>
               <Nav.Link as={Link} to="/detail" style={{ marginLeft: "20px" }}>
                 Shop

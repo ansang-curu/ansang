@@ -12,14 +12,17 @@ import 이미지2 from "./images/IMG_4381.JPG";
 import 이미지3 from "./images/IMG_4382.JPG";
 import ModalInpo from "./ModalInpo.js";
 import Main from "./main.js";
+import Cart from "./pages/Cart.js";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import CardExample from "./pages/CardExample.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import News from "./pages/News.js";
+import axios from "axios";
 
 // -----------------------import---data---------------------
 // import { a, b } from "./data.js";
 import data from "./data.js";
+
 function App() {
   let [imginpo, setInpo] = useState(data);
   let 이미지 = [이미지1, 이미지2, 이미지3];
@@ -37,13 +40,38 @@ function App() {
           element={
             <>
               <div className="main-bg"></div>
-              <Container fluid="sm">
-                <Row>
-                  {data.map(function (item, i) {
-                    return <ModalInpo image={이미지[i]} i={i} data={data} />;
-                  })}
-                </Row>
-              </Container>
+              <div className="conBox" style={{ width: "auto", height: "auto" }}>
+                <div style={{}}>
+                  <Container fluid="sm">
+                    <Row>
+                      {data.map(function (item, i) {
+                        return (
+                          <ModalInpo image={이미지[i]} i={i} data={data} />
+                        );
+                      })}
+                    </Row>
+                  </Container>
+                </div>
+
+                <button
+                  onClick={() => {
+                    axios
+                      .get("https://codingapple1.github.io/shop/data2.json")
+                      .then((결과) => {
+                        console.log(결과.data);
+                        let copy = [...imginpo, ...결과.data];
+                        console.log(copy);
+                        setInpo(copy);
+                      })
+                      .catch(() => {
+                        alert("실패");
+                      });
+                  }}
+                  style={{ marginTop: "180px" }}
+                >
+                  더보기 버튼
+                </button>
+              </div>
             </>
           }
         />
@@ -103,6 +131,8 @@ function App() {
         </Route>
         {/* 어바웃페이지-----------------------------------------*/}
         <Route path="/about:id" element={<div>어바웃페이지</div>} />
+        {/* -------------------------장바구니-------------------- */}
+        <Route path="/cart" element={<Cart></Cart>} />
         <Route path="*" element={<div>없는페이지에요</div>} />
       </Routes>
     </div>
