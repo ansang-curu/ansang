@@ -3,8 +3,25 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Routes, Route, Link } from "react-router-dom";
+import axios from "axios";
+import { useQuery } from "react-query";
+// import { data } from "./data.js";
 
 function Main() {
+  let result = useQuery("작명", () => {
+    return axios
+      .get("https://codingapple1.github.io/userdata.json")
+      .then((a) => {
+        return a.data;
+      });
+  });
+
+  // result.data;
+  // result.isLoading;
+  // result.error;
+  // axios.get("http://codingapple1.githib.io/userdata.json").then((a) => {
+  //   a.data;
+  // });
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -44,6 +61,9 @@ function Main() {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
+            </Nav>
+            <Nav>
+              반갑습니다 {result.isLoading ? "로딩중" : result.data.name}
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,16 +1,22 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Placeholder from "react-bootstrap/Placeholder";
+
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Outlet, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { addData } from "./../store.js";
+import { useDispatch } from "react-redux";
 
 function CardExample(props) {
+  useEffect(() => {});
   let { id } = useParams();
   let idt = id - 1;
   let navigate = useNavigate();
   let [tab, setTab] = useState(0);
   let [isActive, setIsActive] = useState(false);
+  let state = useSelector((state) => state);
+  let dispatch = useDispatch();
 
   return (
     <>
@@ -82,6 +88,15 @@ function CardExample(props) {
         버튼2
       </Button>
       <TabContent tab={tab} data={props.data} />
+      <button
+        onClick={() => {
+          dispatch(addData({ id: 1, name: "red", count: 1 }));
+        }}
+      >
+        데이터늘리기
+      </button>
+      <p></p>
+      {/* 버튼누르면 카트변수에 데이터 하나 추가하기 추가하기 함수 스테이트 수정하려면 스테이트 수정함수 만들기 */}
     </>
   );
   function TabContent({ tab, data }) {

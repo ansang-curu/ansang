@@ -24,6 +24,14 @@ import axios from "axios";
 import data from "./data.js";
 
 function App() {
+  // 스토어에 저장하기
+  let obj = { name: "an", age: 33 };
+
+  localStorage.setItem("data", JSON.stringify(obj));
+  let 꺼낸거 = localStorage.getItem("data");
+
+  console.log(JSON.parse(꺼낸거).age);
+
   let [imginpo, setInpo] = useState(data);
   let 이미지 = [이미지1, 이미지2, 이미지3];
   // 함수입력 연습란-------------------------------
