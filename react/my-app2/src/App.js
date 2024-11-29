@@ -29,7 +29,7 @@ function App() {
           }
         ></Route>
 
-        <Route path="/yes" element={<Approval></Approval>}></Route>
+        <Route path="/yes" element={<Approval />}></Route>
       </Routes>
     </div>
   );
