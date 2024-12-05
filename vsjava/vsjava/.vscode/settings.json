@@ -1,7 +1,9 @@
 {
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar"
-    ]
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java", // 자바 포맷터로 redhat.java 사용
+    "editor.formatOnSave": true // 저장 시 자동 포맷팅
+  },
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": ["lib/**/*.jar"]
 }
