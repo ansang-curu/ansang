@@ -55,3 +55,5 @@ app.post("/newpost", async (요청, 응답) => {
   const newPost = new Post({ title, content });
   await newPost.save();
 });
+//app.post('/add',(요청,응답)=>{
+//console.log(요청.body)})
